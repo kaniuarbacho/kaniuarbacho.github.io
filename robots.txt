@@ -1,0 +1,12 @@
+# robots.txt
+
+User-agent: *
+Disallow: /
+Disallow: /documents/
+Disallow: /img/
+Disallow: /contests.html
+Disallow: /cv.html
+Disallow: /interests.html
+Disallow: /style.css
+
+Allow: /index.html
