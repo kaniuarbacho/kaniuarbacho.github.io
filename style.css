@@ -1,0 +1,219 @@
+/* © 2023 Kaniuar Bacho. All Rights Reserved. */
+::selection {
+    background-color: #7DF9FF;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a.underline-hover:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555555;
+}
+
+.navbar {
+    padding-left: 75px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    align-items: center;
+}
+
+.navbar a {
+    color: #00D1D1;
+    text-decoration: none;
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -7px;
+    left: 0;
+    background-color: #00D1D1;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
+.my-line {
+    height: 0.5px;
+    background-color: cyan;
+    border: none;
+}
+
+.my_profile_pic {
+    width: 70%;
+    border-radius: 100%;
+    border: 1px solid cyan;
+    padding: 3px;
+}
+
+.left-panel {
+    margin-top: 30px;
+    padding-left: 75px;
+    width: 20%;
+    float: left;
+}
+
+.left-panel a {
+    color: rgb(91, 90, 90);
+    text-decoration: none;
+}
+
+.left-panel a:hover {
+    color: #00D1D1;
+}
+
+.small-gap {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.location-icon {
+    font-size: 14px;
+    color: grey;
+    user-select: none;
+}
+
+.split-page {
+    display: flex;
+}
+
+.right-panel {
+    margin-top: 10px;
+    width: 60%;
+    float: right;
+}
+
+
+/* Atom animation */
+
+.center-it {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 210px;
+    width: 77%;
+    position: relative;
+}
+
+#nucleus {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    margin: auto;
+    background: cyan;
+    animation: shining 3s infinite linear;
+}
+
+
+.ellipse {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    border: 3px solid cyan;
+    transform-style: preserve-3d;
+}
+
+
+.ellipse .circle {
+    width: 4.5px;
+    height: 10px;
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    background: cyan;
+    box-shadow: 0 0 10px cyan;
+    animation: move linear infinite;
+}
+
+
+.ellipse:nth-child(1) {
+    transform: rotateZ(60deg) rotateY(70deg);
+}
+
+.ellipse:nth-child(1) .circle {
+    animation-duration: 1s;
+    animation-delay: -0.95s;
+}
+
+.ellipse:nth-child(2) {
+    transform: rotateZ(120deg) rotateY(70deg);
+}
+
+.ellipse:nth-child(2) .circle {
+    animation-duration: 1.5s;
+    animation-delay: -0.9s;
+}
+
+.ellipse:nth-child(3) {
+    transform: rotateZ(180deg) rotateY(70deg);
+}
+
+.ellipse:nth-child(3) .circle {
+    animation-duration: 1.5s;
+    animation-delay: -0.3s;
+}
+
+@keyframes move {
+    from {
+        transform: rotateZ(0) translateX(100px) rotateZ(0) rotateY(-70deg);
+    }
+
+    to {
+        transform: rotateZ(360deg) translateX(100px) rotateZ(-360deg) rotateY(-70deg);
+    }
+}
+
+@keyframes shining {
+    0% {
+        box-shadow: 0 0 0 transparent;
+    }
+
+    50% {
+        box-shadow: 0 0 20px cyan;
+    }
+
+    100% {
+        box-shadow: 0 0 0 transparent;
+    }
+}
+
+/* © 2023 Kaniuar Bacho. All Rights Reserved. */
