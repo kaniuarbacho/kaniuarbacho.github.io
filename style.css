@@ -110,12 +110,12 @@ body {
 
 /* Atom animation */
 
-.center-it {
+.center-atom {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 210px;
-    width: 77%;
+    width: 84%;
     position: relative;
 }
 
@@ -209,6 +209,67 @@ body {
 
     50% {
         box-shadow: 0 0 20px cyan;
+    }
+
+    100% {
+        box-shadow: 0 0 0 transparent;
+    }
+}
+
+/* Brain chip animation */
+
+.center-brain-chip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    width: 84%;
+    position: relative;
+}
+
+#chip {
+    /* Rectangle */
+    position: absolute;
+    top: -3.13rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 3.3rem;
+    height: 3.3rem;
+    border-radius: 25%;
+    margin: auto;
+    background: linear-gradient(to bottom right, cyan, violet);
+    animation: shining_chip 3s infinite linear;
+
+    /* Text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+/* Add white ring */
+#chip_boundary {
+    position: absolute;
+    top: -3.13rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 25%;
+    margin: auto;
+    border: 2px solid white;
+}
+
+@keyframes shining_chip {
+    0% {
+        box-shadow: 0 0 0 transparent;
+    }
+
+    50% {
+        box-shadow: 0 0 12px #6a5ac8;
     }
 
     100% {
