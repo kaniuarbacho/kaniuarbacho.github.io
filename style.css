@@ -66,8 +66,15 @@ body {
 .my_profile_pic {
     width: 70%;
     border-radius: 100%;
-    border: 1px solid cyan;
+    border: 1.5px solid cyan;
     padding: 3px;
+}
+
+.my_profile_pic_2 {
+    width: 63.7%;
+    border-radius: 100%;
+    border: 1.5px solid cyan;
+    padding: 12px;
 }
 
 .left-panel {
